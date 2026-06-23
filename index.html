@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Karen ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#ff6b9d,#ffc2d1);
+    overflow:hidden;
+}
+
+.card{
+    text-align:center;
+    background:rgba(255,255,255,0.2);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    width:90%;
+    max-width:600px;
+    color:white;
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4d88;
+    font-size:18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Untuk Karen ❤️</h1>
+
+    <p>
+        Hai Karen,<br><br>
+
+        Terima kasih sudah hadir dalam hidupku.
+        Setiap senyummu adalah alasan bahagiaku,
+        setiap harimu adalah doa terbaikku.
+
+        Semoga kita selalu bersama,
+        saling mendukung,
+        dan terus menciptakan kenangan indah.
+
+        Aku sayang kamu, Karen. ❤️
+    </p>
+
+    <button onclick="pesan()">Klik Aku ❤️</button>
+</div>
+
+<script>
+function pesan(){
+    alert("Karen ❤️ Terima kasih sudah menjadi bagian terindah dalam hidupku. Aku sayang kamu.");
+}
+
+// Animasi hati
+function buatHati(){
+    const hati = document.createElement("div");
+    hati.classList.add("heart");
+    hati.innerHTML = "❤️";
+
+    hati.style.left = Math.random() * window.innerWidth + "px";
+    hati.style.fontSize = (20 + Math.random()*30) + "px";
+    hati.style.animationDuration = (4 + Math.random()*4) + "s";
+
+    document.body.appendChild(hati);
+
+    setTimeout(() => {
+        hati.remove();
+    }, 8000);
+}
+
+setInterval(buatHati, 300);
+</script>
+
+</body>
+</html>
